@@ -151,4 +151,17 @@
   .gradient-text {
     @apply bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent;
   }
+  
+  /* Chrome gradient animation */
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }

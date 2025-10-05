@@ -52,9 +52,20 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Main Featured Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-700/30">
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-20 h-20 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
+                <div
+                  className="aspect-[4/3] bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
+                  style={{
+                    backgroundImage: "url('/images/gallery/plato1.jpg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  {/* Overlay para mejorar legibilidad */}
+                  <div className="absolute inset-0 bg-black/60"></div>
+
+                  {/* Contenido */}
+                  <div className="text-center p-8 relative z-10">
+                    <div className="w-20 h-20 bg-gray-700/80 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600/50">
                       <svg
                         className="w-10 h-10 text-gray-300"
                         fill="none"
@@ -69,10 +80,10 @@ export default function HomePage() {
                         />
                       </svg>
                     </div>
-                    <p className="text-white text-lg font-light">
+                    <p className="text-white text-lg font-light drop-shadow-lg">
                       Nuestros Platos
                     </p>
-                    <p className="text-white text-sm font-light">
+                    <p className="text-white text-sm font-light drop-shadow-lg">
                       Auténtica cocina argentina
                     </p>
                   </div>
@@ -81,9 +92,20 @@ export default function HomePage() {
 
               {/* Dessert Showcase */}
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-700/30">
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-20 h-20 bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-500">
+                <div
+                  className="aspect-[4/3] bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
+                  style={{
+                    backgroundImage: "url('/images/menu/postre1.jpg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  {/* Overlay para mejorar legibilidad */}
+                  <div className="absolute inset-0 bg-black/60"></div>
+
+                  {/* Contenido */}
+                  <div className="text-center p-8 relative z-10">
+                    <div className="w-20 h-20 bg-gray-600/80 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-500/50">
                       <svg
                         className="w-10 h-10 text-gray-300"
                         fill="none"
@@ -98,10 +120,10 @@ export default function HomePage() {
                         />
                       </svg>
                     </div>
-                    <p className="text-white text-lg font-light">
+                    <p className="text-white text-lg font-light drop-shadow-lg">
                       Postres Artesanales
                     </p>
-                    <p className="text-gray-400 text-sm font-light">
+                    <p className="text-white text-sm font-light drop-shadow-lg">
                       Crème brûlée y delicias dulces
                     </p>
                   </div>
@@ -292,9 +314,15 @@ export default function HomePage() {
                   href="https://maps.google.com/?q=Juan+M+García+8852,+Benavidez,+B1421,+AR"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-gray-700 text-white font-light py-3 px-6 rounded-xl text-center hover:bg-gray-600 transition-all duration-300 border border-gray-600"
+                  className="block w-full text-white font-light py-3 px-6 rounded-xl text-center hover:opacity-90 transition-all duration-300 relative overflow-hidden"
+                  style={{
+                    background:
+                      "linear-gradient(45deg, #4285f4, #ea4335, #fbbc04, #34a853)",
+                    backgroundSize: "200% 200%",
+                    animation: "gradient 3s ease infinite",
+                  }}
                 >
-                  <div className="flex items-center justify-center gap-2">
+                  <div className="flex items-center justify-center gap-2 bg-gray-700/90 backdrop-blur-sm py-2 px-4 rounded-lg">
                     <svg
                       className="w-5 h-5"
                       fill="currentColor"

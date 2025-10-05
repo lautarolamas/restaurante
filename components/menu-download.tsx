@@ -160,9 +160,9 @@ export function MenuDownload() {
               Actualizada:{" "}
               {new Date(menuFile.uploadedAt).toLocaleDateString("es-AR")}
             </p>
-            <p className="text-sm text-gray-400">
+            {/* <p className="text-sm text-gray-400">
               Tamaño: {(menuFile.size / 1024 / 1024).toFixed(1)} MB
-            </p>
+            </p> */}
           </div>
 
           <Button
