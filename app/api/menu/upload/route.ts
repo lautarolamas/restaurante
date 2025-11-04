@@ -15,9 +15,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Only PDF files are allowed" }, { status: 400 })
     }
 
-    // Validate file size (10MB max)
-    if (file.size > 10 * 1024 * 1024) {
-      return NextResponse.json({ error: "File size must be less than 10MB" }, { status: 400 })
+    // Validate file size (4MB max for serverless functions, 10MB for client upload)
+    // Vercel serverless functions have a 4.5MB body limit
+    if (file.size > 4 * 1024 * 1024) {
+      return NextResponse.json({ 
+        error: "El archivo es demasiado grande. Máximo 4MB para subida desde servidor. Considera usar client upload." 
+      }, { status: 400 })
     }
 
     // Delete existing menu files first
@@ -51,6 +54,26 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error("Upload error:", error)
-    return NextResponse.json({ error: "Upload failed" }, { status: 500 })
+    const errorMessage = error instanceof Error ? error.message : "Upload failed"
+    const errorStack = error instanceof Error ? error.stack : String(error)
+    
+    // Log completo para debugging
+    console.error("Error details:", {
+      message: errorMessage,
+      stack: errorStack,
+      error: error
+    })
+    
+    // Si es un error de autenticación, probablemente Blob Storage no está configurado
+    if (errorMessage.includes("token") || errorMessage.includes("BLOB") || errorMessage.includes("Unauthorized")) {
+      return NextResponse.json({ 
+        error: "Blob Storage no está conectado. Por favor, conecta el Blob Store en Vercel Dashboard → Storage → Blob → Connect Database" 
+      }, { status: 500 })
+    }
+    
+    return NextResponse.json({ 
+      error: errorMessage,
+      details: process.env.NODE_ENV === "development" ? errorStack : undefined
+    }, { status: 500 })
   }
 }
