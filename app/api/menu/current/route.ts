@@ -1,46 +1,39 @@
 import { NextResponse } from "next/server"
-import { readdir, stat } from "fs/promises"
-import { join } from "path"
+import { list } from "@vercel/blob"
 
 export async function GET() {
   try {
-    // Buscar archivos de menú en la carpeta uploads
-    const uploadsDir = join(process.cwd(), "public", "uploads")
-    
+    // Buscar archivos de menú en Vercel Blob Storage
     try {
-      const files = await readdir(uploadsDir)
-      const menuFiles = files.filter(file => file.startsWith("carta-mestizo") && file.endsWith(".pdf"))
+      const { blobs } = await list({ prefix: "carta-mestizo" })
       
-      if (menuFiles.length === 0) {
+      if (blobs.length === 0) {
         return NextResponse.json({ menu: null })
       }
 
       // Obtener el archivo más reciente
-      let latestFile = menuFiles[0]
-      let latestTime = 0
+      let latestBlob = blobs[0]
+      let latestTime = new Date(latestBlob.uploadedAt).getTime()
 
-      for (const file of menuFiles) {
-        const filePath = join(uploadsDir, file)
-        const stats = await stat(filePath)
-        if (stats.mtime.getTime() > latestTime) {
-          latestTime = stats.mtime.getTime()
-          latestFile = file
+      for (const blob of blobs) {
+        const blobTime = new Date(blob.uploadedAt).getTime()
+        if (blobTime > latestTime) {
+          latestTime = blobTime
+          latestBlob = blob
         }
       }
 
-      const filePath = join(uploadsDir, latestFile)
-      const stats = await stat(filePath)
-
       const menuFile = {
-        url: `/uploads/${latestFile}`,
-        filename: latestFile,
-        uploadedAt: stats.mtime.toISOString(),
-        size: stats.size,
+        url: latestBlob.url,
+        filename: latestBlob.pathname,
+        uploadedAt: latestBlob.uploadedAt,
+        size: latestBlob.size,
       }
 
       return NextResponse.json({ menu: menuFile })
     } catch (error) {
-      // Si no existe la carpeta uploads o no hay archivos
+      // Si no hay archivos o hay un error
+      console.error("Error listing blobs:", error)
       return NextResponse.json({ menu: null })
     }
   } catch (error) {
