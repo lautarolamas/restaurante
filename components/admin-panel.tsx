@@ -62,7 +62,7 @@ export function AdminPanel({ onLogout }: AdminPanelProps) {
   };
 
   return (
-    <Card className="max-w-2xl mx-auto bg-gray-800 border-amber-600/30">
+    <Card className="max-w-2xl mx-auto bg-transparent border-0">
       <CardHeader className="text-center">
         <CardTitle className="text-2xl text-white">
           Panel de Administración
@@ -72,10 +72,10 @@ export function AdminPanel({ onLogout }: AdminPanelProps) {
 
       <CardContent className="space-y-6">
         {/* Upload Section */}
-        <div className="border-2 border-dashed border-amber-600/30 rounded-2xl p-8 text-center bg-gray-700/50">
-          <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+        <div className="border-2 border-dashed border-gray-700/50 rounded-2xl p-8 text-center bg-gray-800/30">
+          <div className="w-12 h-12 bg-gray-700/50 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600/50">
             <svg
-              className="w-6 h-6 text-white"
+              className="w-6 h-6 text-gray-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ export function AdminPanel({ onLogout }: AdminPanelProps) {
           <Button
             onClick={() => fileInputRef.current?.click()}
             disabled={uploading}
-            className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-lg hover:shadow-amber-500/25"
+            className="bg-gray-800 hover:bg-gray-700 text-white border border-gray-700/50"
           >
             {uploading ? (
               <>
@@ -127,26 +127,26 @@ export function AdminPanel({ onLogout }: AdminPanelProps) {
 
         {/* Status Messages */}
         {error && (
-          <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-4">
-            <p className="text-red-300">{error}</p>
+          <div className="bg-red-100/80 border border-red-500/50 rounded-xl p-4">
+            <p className="text-red-800">{error}</p>
           </div>
         )}
 
         {uploadSuccess && (
-          <div className="bg-green-900/20 border border-green-500/30 rounded-xl p-4">
-            <p className="text-green-300">¡Carta actualizada exitosamente!</p>
-            <p className="text-sm text-green-400 mt-1">
+          <div className="bg-green-100/80 border border-green-500/50 rounded-xl p-4">
+            <p className="text-green-800">¡Carta actualizada exitosamente!</p>
+            <p className="text-sm text-green-700 mt-1">
               Los clientes ya pueden descargar la nueva versión.
             </p>
           </div>
         )}
 
         {/* Actions */}
-        <div className="flex justify-between pt-4 border-t border-gray-700">
+        <div className="flex justify-between pt-4 border-t border-gray-700/50">
           <Button
             onClick={onLogout}
             variant="outline"
-            className="border-gray-600 text-gray-300 hover:bg-gray-700"
+            className="border-gray-700/50 text-gray-300 hover:bg-gray-800/50"
           >
             Cerrar Sesión
           </Button>
@@ -154,7 +154,7 @@ export function AdminPanel({ onLogout }: AdminPanelProps) {
           <Button
             onClick={() => window.location.reload()}
             variant="outline"
-            className="border-gray-600 text-gray-300 hover:bg-gray-700"
+            className="border-gray-700/50 text-gray-300 hover:bg-gray-800/50"
           >
             Actualizar Página
           </Button>

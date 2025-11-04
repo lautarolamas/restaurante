@@ -113,7 +113,7 @@ export function MenuDownload() {
     return (
       <div className="text-center py-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-500 mx-auto"></div>
-        <p className="text-gray-300 mt-2">Cargando carta...</p>
+        <p className="text-gray-600 mt-2">Cargando carta...</p>
       </div>
     );
   }
@@ -123,8 +123,8 @@ export function MenuDownload() {
     <div
       className={`mb-6 p-4 rounded-xl border ${
         type === "success"
-          ? "bg-green-900/20 border-green-500/30 text-green-300"
-          : "bg-red-900/20 border-red-500/30 text-red-300"
+          ? "bg-green-100/80 border-green-500/50 text-green-800"
+          : "bg-red-100/80 border-red-500/50 text-red-800"
       }`}
     >
       <p className="text-center">{message}</p>
@@ -152,13 +152,20 @@ export function MenuDownload() {
       {/* Información de la carta actual */}
       {menuFile ? (
         <>
-          <div className="bg-gray-800 rounded-lg p-4 mb-6 border border-gray-600/30">
+          <div className="bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50">
             <h3 className="font-semibold text-white mb-2">
               {menuFile.filename}
             </h3>
             <p className="text-sm text-gray-300">
               Actualizada:{" "}
-              {new Date(menuFile.uploadedAt).toLocaleDateString("es-AR")}
+              {new Date(menuFile.uploadedAt).toLocaleString("es-AR", {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: false,
+              })}
             </p>
             {/* <p className="text-sm text-gray-400">
               Tamaño: {(menuFile.size / 1024 / 1024).toFixed(1)} MB
@@ -167,7 +174,7 @@ export function MenuDownload() {
 
           <Button
             onClick={handleDownload}
-            className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 text-lg border border-gray-600"
+            className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 text-lg border border-gray-700"
             size="lg"
           >
             <svg
@@ -187,11 +194,11 @@ export function MenuDownload() {
           </Button>
         </>
       ) : (
-        <div className="bg-gray-800 rounded-lg p-6 border border-amber-600/20">
-          <p className="text-gray-300 mb-2">
+        <div className="bg-gray-800/50 rounded-lg p-6 border border-amber-600/50">
+          <p className="text-white mb-2">
             No hay carta disponible en este momento.
           </p>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-300">
             Sube un archivo PDF para comenzar.
           </p>
         </div>

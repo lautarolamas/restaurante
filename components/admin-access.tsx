@@ -58,12 +58,12 @@ export function AdminAccess() {
         <Button
           onClick={() => setShowLogin(true)}
           variant="ghost"
-          className="text-amber-300 hover:text-amber-200 text-sm border border-amber-600/30 hover:border-amber-500/50"
+          className="bg-gray-800/50 hover:bg-gray-700/50 text-white text-sm border border-gray-700/50 hover:border-gray-600/50"
         >
           Acceso Administrador
         </Button>
       ) : (
-        <div className="bg-gray-800 rounded-2xl shadow-2xl p-6 max-w-md mx-auto border border-amber-600/30">
+        <div className="bg-gray-800/50 rounded-2xl shadow-xl p-6 max-w-md mx-auto border border-gray-700/50">
           <h3 className="text-lg font-semibold text-white mb-4">
             Acceso de Administrador
           </h3>
@@ -75,18 +75,18 @@ export function AdminAccess() {
                 placeholder="Contraseña"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-amber-500"
+                className="w-full bg-gray-700/50 border-gray-600/50 text-white placeholder-gray-400 focus:border-gray-500"
                 required
               />
             </div>
 
-            {error && <p className="text-red-400 text-sm">{error}</p>}
+            {error && <p className="text-red-300 text-sm">{error}</p>}
 
             <div className="flex gap-2">
               <Button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white"
+                className="flex-1 bg-gray-800 hover:bg-gray-700 text-white border border-gray-700/50"
               >
                 {loading ? "Verificando..." : "Ingresar"}
               </Button>
@@ -94,7 +94,7 @@ export function AdminAccess() {
                 type="button"
                 variant="outline"
                 onClick={() => setShowLogin(false)}
-                className="border-gray-600 text-gray-300 hover:bg-gray-700"
+                className="border-gray-700/50 text-gray-300 hover:bg-gray-800/50"
               >
                 Cancelar
               </Button>

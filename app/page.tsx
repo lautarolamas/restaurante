@@ -4,30 +4,30 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen" style={{ backgroundColor: "#f5f5eb" }}>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/80"></div>
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.02%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
-        </div>
-
+      <section
+        className="relative overflow-hidden"
+        style={{ backgroundColor: "#f5f5eb" }}
+      >
         {/* Header */}
-        <header className="relative z-10 bg-black/95 backdrop-blur-sm shadow-2xl border-b border-gray-800/50">
+        <header
+          className="relative z-10"
+          style={{ backgroundColor: "#f5f5eb" }}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="text-center">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center">
                 <Image
-                  src="/images/mestizo-logo.png"
+                  src="/images/laguna.png"
                   alt="Mestizo Complejo Deli"
                   width={400}
                   height={120}
-                  className="h-20 sm:h-24 w-auto drop-shadow-2xl"
+                  className="h-32 sm:h-48 w-auto drop-shadow-2xl"
                   priority
                 />
               </div>
-              <p className="text-white text-lg sm:text-xl font-light">
+              <p className="text-gray-800 text-lg sm:text-xl font-light">
                 Auténtica cocina argentina
               </p>
             </div>
@@ -37,11 +37,11 @@ export default function HomePage() {
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-ligh text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-ligh text-gray-900 mb-6">
               Sabores que{" "}
-              <span className="text-white font-bold">conquistan</span>
+              <span className="text-gray-900 font-bold">conquistan</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
               Descubre la auténtica gastronomía argentina en un ambiente cálido
               y familiar
             </p>
@@ -51,7 +51,7 @@ export default function HomePage() {
           <div className="relative max-w-6xl mx-auto mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Main Featured Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-700/30">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-300/50">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
                   style={{
@@ -61,13 +61,13 @@ export default function HomePage() {
                   }}
                 >
                   {/* Overlay para mejorar legibilidad */}
-                  <div className="absolute inset-0 bg-black/60"></div>
+                  <div className="absolute inset-0 bg-black/20"></div>
 
                   {/* Contenido */}
                   <div className="text-center p-8 relative z-10">
-                    <div className="w-20 h-20 bg-gray-700/80 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600/50">
+                    <div className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 border border-white/50">
                       <svg
-                        className="w-10 h-10 text-gray-300"
+                        className="w-10 h-10 text-gray-800"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -80,7 +80,7 @@ export default function HomePage() {
                         />
                       </svg>
                     </div>
-                    <p className="text-white text-lg font-light drop-shadow-lg">
+                    <p className="text-white text-lg font-medium drop-shadow-lg">
                       Nuestros Platos
                     </p>
                     <p className="text-white text-sm font-light drop-shadow-lg">
@@ -91,7 +91,7 @@ export default function HomePage() {
               </div>
 
               {/* Dessert Showcase */}
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-700/30">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-300/50">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
                   style={{
@@ -101,13 +101,13 @@ export default function HomePage() {
                   }}
                 >
                   {/* Overlay para mejorar legibilidad */}
-                  <div className="absolute inset-0 bg-black/60"></div>
+                  <div className="absolute inset-0 bg-black/20"></div>
 
                   {/* Contenido */}
                   <div className="text-center p-8 relative z-10">
-                    <div className="w-20 h-20 bg-gray-600/80 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-500/50">
+                    <div className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 border border-white/50">
                       <svg
-                        className="w-10 h-10 text-gray-300"
+                        className="w-10 h-10 text-gray-800"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -120,11 +120,11 @@ export default function HomePage() {
                         />
                       </svg>
                     </div>
-                    <p className="text-white text-lg font-light drop-shadow-lg">
+                    <p className="text-white text-lg font-medium drop-shadow-lg">
                       Postres Artesanales
                     </p>
                     <p className="text-white text-sm font-light drop-shadow-lg">
-                      Crème brûlée y delicias dulces
+                      {/* Crème brûlée y delicias dulces */}
                     </p>
                   </div>
                 </div>
@@ -135,15 +135,21 @@ export default function HomePage() {
       </section>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <main
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+        style={{ backgroundColor: "#f5f5eb" }}
+      >
         <div className="grid gap-8 lg:gap-12 lg:grid-cols-3">
           {/* Menu Download Section */}
           <div className="lg:col-span-2">
-            <div className="bg-gray-900/50 rounded-2xl shadow-xl p-8 sm:p-12 border border-gray-700/30 hover:border-gray-600/50 transition-all duration-300">
+            <div
+              className="rounded-2xl shadow-xl p-8 sm:p-12 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
+              style={{ backgroundColor: "#222222" }}
+            >
               <div className="text-center mb-8">
-                <div className="w-16 h-16 bg-gray-700 rounded-xl flex items-center justify-center mx-auto mb-6 border border-gray-600">
+                <div className="w-16 h-16 bg-gray-700/50 rounded-xl flex items-center justify-center mx-auto mb-6 border border-gray-600/50">
                   <svg
-                    className="w-8 h-8 text-gray-300"
+                    className="w-8 h-8 text-gray-200"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -152,14 +158,14 @@ export default function HomePage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={1.5}
-                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                     />
                   </svg>
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">
                   Nuestra Carta
                 </h2>
-                <p className="text-gray-400 text-lg leading-relaxed font-light">
+                <p className="text-gray-300 text-lg leading-relaxed font-light">
                   Descarga nuestro menú actualizado con todos los platos y
                   precios
                 </p>
@@ -169,7 +175,7 @@ export default function HomePage() {
                 fallback={
                   <div className="text-center py-12">
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600 mx-auto"></div>
-                    <p className="text-gray-500 mt-4 text-lg">
+                    <p className="text-gray-300 mt-4 text-lg">
                       Cargando carta...
                     </p>
                   </div>
@@ -183,11 +189,14 @@ export default function HomePage() {
           {/* Restaurant Info & Location */}
           <div className="space-y-8">
             {/* Restaurant Info */}
-            <div className="bg-gray-900/50 rounded-2xl shadow-xl p-8 border border-gray-700/30">
+            <div
+              className="rounded-2xl shadow-xl p-8 border border-gray-700/50"
+              style={{ backgroundColor: "#222222" }}
+            >
               <div className="text-center mb-8">
-                <div className="w-14 h-14 bg-gray-700 rounded-xl flex items-center justify-center mx-auto mb-4 border border-gray-600">
+                <div className="w-14 h-14 bg-gray-700/50 rounded-xl flex items-center justify-center mx-auto mb-4 border border-gray-600/50">
                   <svg
-                    className="w-6 h-6 text-gray-300"
+                    className="w-6 h-6 text-gray-200"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -205,34 +214,108 @@ export default function HomePage() {
                 </h3>
               </div>
 
-              <div className="space-y-4 text-gray-300">
-                <div className="flex items-center gap-3 p-3 bg-gray-800/50 rounded-xl border border-gray-600/30">
-                  <svg
-                    className="w-5 h-5 text-gray-400 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <span className="font-light text-white">
-                    Lun - Dom: 12:00 - 23:00
-                  </span>
+              <div className="space-y-3 text-gray-300">
+                {/* Lunes */}
+                <div className="p-3 bg-gray-800/50 rounded-xl border border-gray-700/50">
+                  <div className="flex items-center gap-2 mb-1">
+                    <svg
+                      className="w-4 h-4 text-gray-400 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span className="font-light text-white text-sm">Lunes</span>
+                  </div>
+                  <p className="text-gray-300 text-sm pl-6">10.00 - 00.00 hs</p>
+                </div>
+
+                {/* Martes */}
+                <div className="p-3 bg-gray-800/50 rounded-xl border border-gray-700/50">
+                  <div className="flex items-center gap-2 mb-1">
+                    <svg
+                      className="w-4 h-4 text-gray-400 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span className="font-light text-white text-sm">
+                      Martes
+                    </span>
+                  </div>
+                  <p className="text-gray-300 text-sm pl-6">Cerrado</p>
+                </div>
+
+                {/* Miércoles - Sábado */}
+                <div className="p-3 bg-gray-800/50 rounded-xl border border-gray-700/50">
+                  <div className="flex items-center gap-2 mb-1">
+                    <svg
+                      className="w-4 h-4 text-gray-400 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span className="font-light text-white text-sm">
+                      Miércoles - Sábado
+                    </span>
+                  </div>
+                  <p className="text-gray-300 text-sm pl-6">10.00 - 00.00 hs</p>
+                </div>
+
+                {/* Domingo */}
+                <div className="p-3 bg-gray-800/50 rounded-xl border border-gray-700/50">
+                  <div className="flex items-center gap-2 mb-1">
+                    <svg
+                      className="w-4 h-4 text-gray-400 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span className="font-light text-white text-sm">
+                      Domingo
+                    </span>
+                  </div>
+                  <p className="text-gray-300 text-sm pl-6">10.00 - 16.00 hs</p>
                 </div>
               </div>
             </div>
 
             {/* Location Section */}
-            <div className="bg-gray-900/50 rounded-2xl shadow-xl p-8 border border-gray-700/30">
+            <div
+              className="rounded-2xl shadow-xl p-8 border border-gray-700/50"
+              style={{ backgroundColor: "#222222" }}
+            >
               <div className="text-center mb-8">
-                <div className="w-14 h-14 bg-gray-700 rounded-xl flex items-center justify-center mx-auto mb-4 border border-gray-600">
+                <div className="w-14 h-14 bg-gray-700/50 rounded-xl flex items-center justify-center mx-auto mb-4 border border-gray-600/50">
                   <svg
-                    className="w-6 h-6 text-gray-300"
+                    className="w-6 h-6 text-gray-200"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -257,7 +340,7 @@ export default function HomePage() {
               </div>
 
               <div className="space-y-4 text-gray-300">
-                <div className="p-4 bg-gray-800/50 rounded-xl border border-gray-600/30">
+                <div className="p-4 bg-gray-800/50 rounded-xl border border-gray-700/50">
                   <div className="flex items-start gap-3">
                     <svg
                       className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5"
@@ -280,16 +363,16 @@ export default function HomePage() {
                     </svg>
                     <div>
                       <p className="font-light text-white">
-                        Juan M García 8852
+                        Av Dean Funes 1700
                       </p>
                       <p className="text-gray-400 font-light">
-                        Benavidez, B1421, AR
+                        Dique Luján Benavidez
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-4 bg-gray-800/50 rounded-xl border border-gray-600/30">
+                <div className="p-4 bg-gray-800/50 rounded-xl border border-gray-700/50">
                   <div className="flex items-center gap-3">
                     <svg
                       className="w-5 h-5 text-gray-400 flex-shrink-0"
@@ -311,18 +394,12 @@ export default function HomePage() {
 
                 {/* Google Maps Button */}
                 <a
-                  href="https://maps.google.com/?q=Juan+M+García+8852,+Benavidez,+B1421,+AR"
+                  href="https://www.google.com/maps/place/De%C3%A1n+Funes+1700,+Dique+Luj%C3%A1n,+Provincia+de+Buenos+Aires/@-34.3962325,-58.7099351,17z/data=!3m1!4b1!4m5!3m4!1s0x95bca1b46d9e27c7:0x1995f97e6efb009b!8m2!3d-34.3962325!4d-58.7073602?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-white font-light py-3 px-6 rounded-xl text-center hover:opacity-90 transition-all duration-300 relative overflow-hidden"
-                  style={{
-                    background:
-                      "linear-gradient(45deg, #4285f4, #ea4335, #fbbc04, #34a853)",
-                    backgroundSize: "200% 200%",
-                    animation: "gradient 3s ease infinite",
-                  }}
+                  className="block w-full bg-gray-800/50 hover:bg-gray-700/50 text-white font-light py-3 px-6 rounded-xl text-center border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
                 >
-                  <div className="flex items-center justify-center gap-2 bg-gray-700/90 backdrop-blur-sm py-2 px-4 rounded-lg">
+                  <div className="flex items-center justify-center gap-2">
                     <svg
                       className="w-5 h-5"
                       fill="currentColor"
@@ -340,21 +417,24 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-black text-gray-400 py-12 mt-20 border-t border-gray-800/50">
+      <footer
+        className="text-gray-700 py-12 mt-20"
+        style={{ backgroundColor: "#f5f5eb" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="mb-6">
+            <div>
               <Image
-                src="/images/mestizo-logo.png"
+                src="/images/laguna.png"
                 alt="Mestizo Complejo Deli"
                 width={200}
                 height={60}
-                className="h-12 w-auto mx-auto"
+                className="h-20 w-auto mx-auto"
               />
             </div>
-            <p className="text-white text-lg mb-4 font-light">
+            {/* <p className="text-gray-800 text-lg mb-4 font-light">
               Auténtica cocina argentina en Benavidez
-            </p>
+            </p> */}
             <p className="text-gray-600 font-light">
               &copy; 2025 Mestizo Deli. Todos los derechos reservados.
             </p>
