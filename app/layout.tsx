@@ -14,7 +14,7 @@ const unbounded = Unbounded({
 export const metadata: Metadata = {
   title: "Mestizo Deli - Auténtica Cocina Argentina",
   description:
-    "Descarga nuestra carta actualizada con los mejores platos de la cocina argentina",
+    "Mira nuestra carta actualizada con los mejores platos de la cocina argentina",
   generator: "v0.app",
 };
 

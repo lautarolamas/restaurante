@@ -166,8 +166,7 @@ export default function HomePage() {
                   Nuestra Carta
                 </h2>
                 <p className="text-gray-300 text-lg leading-relaxed font-light">
-                  Descarga nuestro menú actualizado con todos los platos y
-                  precios
+                  Mira nuestro menú actualizado con todos los platos y precios
                 </p>
               </div>
 
