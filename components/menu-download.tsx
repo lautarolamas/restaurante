@@ -25,7 +25,10 @@ export function MenuDownload() {
   const fetchCurrentMenu = async () => {
     try {
       setLoading(true);
-      const response = await fetch("/api/menu/current");
+      const response = await fetch("/api/menu/current", {
+        cache: "no-store",
+        next: { revalidate: 0 },
+      });
 
       if (!response.ok) {
         throw new Error("Error al cargar la carta");

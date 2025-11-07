@@ -1,6 +1,13 @@
 import { NextResponse } from "next/server"
 import { list } from "@vercel/blob"
 
+export const dynamic = "force-dynamic"
+export const revalidate = 0
+
+const noCacheHeaders = {
+  "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+}
+
 export async function GET() {
   try {
     // Buscar archivos de menú en Vercel Blob Storage
@@ -24,7 +31,7 @@ export async function GET() {
       
       if (blobs.length === 0) {
         console.log("No menu files found in Blob Storage")
-        return NextResponse.json({ menu: null })
+        return NextResponse.json({ menu: null }, { headers: noCacheHeaders })
       }
 
       // Obtener el archivo más reciente
@@ -47,7 +54,7 @@ export async function GET() {
       }
 
       console.log("Returning menu file:", menuFile)
-      return NextResponse.json({ menu: menuFile })
+      return NextResponse.json({ menu: menuFile }, { headers: noCacheHeaders })
     } catch (error) {
       // Si no hay archivos o hay un error
       console.error("Error listing blobs:", error)
@@ -60,13 +67,13 @@ export async function GET() {
         console.error("Blob Storage authentication error - check BLOB_READ_WRITE_TOKEN")
         return NextResponse.json({ 
           error: "Blob Storage authentication failed. Check BLOB_READ_WRITE_TOKEN variable." 
-        }, { status: 500 })
+        }, { status: 500, headers: noCacheHeaders })
       }
       
-      return NextResponse.json({ menu: null })
+      return NextResponse.json({ menu: null }, { headers: noCacheHeaders })
     }
   } catch (error) {
     console.error("Error fetching current menu:", error)
-    return NextResponse.json({ error: "Failed to fetch menu" }, { status: 500 })
+    return NextResponse.json({ error: "Failed to fetch menu" }, { status: 500, headers: noCacheHeaders })
   }
 }
