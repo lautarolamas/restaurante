@@ -14,16 +14,16 @@ export default function HomePage() {
     image: "https://lagunamestizo.com/images/laguna.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Deán Funes 1700",
+      streetAddress: "Deán Funes 1695",
       addressLocality: "Dique Luján",
       addressRegion: "Buenos Aires",
-      postalCode: "B1421",
+      postalCode: "B1623",
       addressCountry: "AR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "-34.3962325",
-      longitude: "-58.7073602",
+      latitude: "-34.3966064",
+      longitude: "-58.7057255",
     },
     telephone: "+54 9 11 7367 3508",
     openingHoursSpecification: [
@@ -430,9 +430,7 @@ export default function HomePage() {
                         />
                       </svg>
                       <div>
-                        <p className="font-light text-white">
-                          Av Dean Funes 1700
-                        </p>
+                        <p className="font-light text-white">Deán Funes 1695</p>
                         <p className="text-gray-400 font-light">
                           Dique Luján Benavidez
                         </p>
@@ -462,7 +460,7 @@ export default function HomePage() {
 
                   {/* Google Maps Button */}
                   <a
-                    href="https://www.google.com/maps/place/De%C3%A1n+Funes+1700,+Dique+Luj%C3%A1n,+Provincia+de+Buenos+Aires/@-34.3962325,-58.7099351,17z/data=!3m1!4b1!4m5!3m4!1s0x95bca1b46d9e27c7:0x1995f97e6efb009b!8m2!3d-34.3962325!4d-58.7073602?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D"
+                    href="https://www.google.com/maps/place/De%C3%A1n+Funes+1695,+B1623+Dique+Luj%C3%A1n,+Provincia+de+Buenos+Aires/@-34.3966064,-58.7083004,17z/data=!3m1!4b1!4m6!3m5!1s0x95bca1b19f825e05:0x5a824b38e4c00e84!8m2!3d-34.3966064!4d-58.7057255!16s%2Fg%2F11s9ks1fxh?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-gray-800/50 hover:bg-gray-700/50 text-white font-light py-3 px-6 rounded-xl text-center border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
