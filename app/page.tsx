@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { MenuDownload } from "@/components/menu-download";
-import { ReviewsSection } from "@/components/reviews-section";
+// import { ReviewsSection } from "@/components/reviews-section";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -99,7 +99,7 @@ export default function HomePage() {
             <div className="text-center mb-16">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-ligh text-gray-900 mb-6">
                 Sabores que{" "}
-                <span className="text-gray-900 font-bold">conquistan</span>
+                <span className="text-gray-900 font-bold">conquistan </span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
                 Descubre la auténtica gastronomía argentina en un ambiente
