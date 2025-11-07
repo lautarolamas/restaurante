@@ -96,11 +96,15 @@ export default function HomePage() {
 
           {/* Hero Content */}
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            {/* H1 oculto para SEO - solo visible para motores de búsqueda */}
+            <h1 className="sr-only">
+              Laguna Mestizo - Restaurante Argentino en Benavidez | Dique Luján
+            </h1>
             <div className="text-center mb-16">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-ligh text-gray-900 mb-6">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-ligh text-gray-900 mb-6">
                 Sabores que{" "}
                 <span className="text-gray-900 font-bold">conquistan </span>
-              </h1>
+              </h2>
               <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
                 Descubre la auténtica gastronomía argentina en un ambiente
                 cálido y familiar

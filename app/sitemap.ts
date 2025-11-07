@@ -10,12 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
-    {
-      url: `${baseUrl}/admin`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.3,
-    },
+    // No incluir /admin en el sitemap para evitar indexación
   ];
 }
 
