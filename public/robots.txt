@@ -1,0 +1,15 @@
+# robots.txt para lagunamestizo.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lagunamestizo.com/sitemap.xml
+
+# No indexar páginas de administración
+Disallow: /admin
+Disallow: /api/
+
+# Permitir indexar recursos estáticos
+Allow: /images/
+Allow: /uploads/
+
