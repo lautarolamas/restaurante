@@ -34,7 +34,7 @@ export default function AdminPage() {
         style={{ backgroundColor: "#f5f5eb" }}
       >
         <div
-          className="rounded-3xl shadow-xl p-8 border border-gray-700/50"
+          className="rounded-3xl shadow-xl p-4 sm:p-8 border border-gray-700/50"
           style={{ backgroundColor: "#222222" }}
         >
           <AdminAccess />

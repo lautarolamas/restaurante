@@ -62,15 +62,15 @@ export function AdminPanel({ onLogout }: AdminPanelProps) {
   };
 
   return (
-    <Card className="max-w-2xl mx-auto bg-transparent border-0">
-      <CardHeader className="text-center">
+    <Card className="w-full bg-transparent border-0">
+      <CardHeader className="text-center px-0 pb-6">
         <CardTitle className="text-2xl text-white">
           Panel de Administración
         </CardTitle>
         <p className="text-gray-300">Actualizar carta del restaurante</p>
       </CardHeader>
 
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 px-0">
         {/* Upload Section */}
         <div className="border-2 border-dashed border-gray-700/50 rounded-2xl p-8 text-center bg-gray-800/30">
           <div className="w-12 h-12 bg-gray-700/50 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600/50">
@@ -142,11 +142,11 @@ export function AdminPanel({ onLogout }: AdminPanelProps) {
         )}
 
         {/* Actions */}
-        <div className="flex justify-between pt-4 border-t border-gray-700/50">
+        <div className="flex flex-col sm:flex-row gap-3 sm:justify-between pt-4 border-t border-gray-700/50 mt-6">
           <Button
             onClick={onLogout}
             variant="outline"
-            className="border-gray-700/50 text-gray-300 hover:bg-gray-800/50"
+            className="w-full sm:flex-1 border-gray-700/50 text-black hover:bg-gray-800/50"
           >
             Cerrar Sesión
           </Button>
@@ -154,7 +154,7 @@ export function AdminPanel({ onLogout }: AdminPanelProps) {
           <Button
             onClick={() => window.location.reload()}
             variant="outline"
-            className="border-gray-700/50 text-gray-300 hover:bg-gray-800/50"
+            className="w-full sm:flex-1 border-gray-700/50 text-black hover:bg-gray-800/50"
           >
             Actualizar Página
           </Button>

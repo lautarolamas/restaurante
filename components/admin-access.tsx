@@ -94,7 +94,7 @@ export function AdminAccess() {
                 type="button"
                 variant="outline"
                 onClick={() => setShowLogin(false)}
-                className="border-gray-700/50 text-gray-300 hover:bg-gray-800/50"
+                className="border-gray-700/50 text-blackhover:bg-gray-800/50"
               >
                 Cancelar
               </Button>

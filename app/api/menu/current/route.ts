@@ -41,7 +41,7 @@ export async function GET() {
 
       const menuFile = {
         url: latestBlob.url,
-        filename: latestBlob.pathname.split('/').pop() || latestBlob.pathname.split('\\').pop() || latestBlob.pathname,
+        filename: "lagunaMestizo.pdf",
         uploadedAt: latestBlob.uploadedAt,
         size: latestBlob.size,
       }

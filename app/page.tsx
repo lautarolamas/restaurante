@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { MenuDownload } from "@/components/menu-download";
+import { ReviewsSection } from "@/components/reviews-section";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -20,7 +21,7 @@ export default function HomePage() {
               <div className="flex justify-center">
                 <Image
                   src="/images/laguna.png"
-                  alt="Mestizo Complejo Deli"
+                  alt="laguna mestizo"
                   width={400}
                   height={120}
                   className="h-32 sm:h-48 w-auto drop-shadow-2xl"
@@ -82,9 +83,6 @@ export default function HomePage() {
                     </div>
                     <p className="text-white text-lg font-medium drop-shadow-lg">
                       Nuestros Platos
-                    </p>
-                    <p className="text-white text-sm font-light drop-shadow-lg">
-                      Auténtica cocina argentina
                     </p>
                   </div>
                 </div>
@@ -162,11 +160,11 @@ export default function HomePage() {
                     />
                   </svg>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">
-                  Nuestra Carta
+                <h2 className="text-2xl sm:text-3xl font-light text-white mb-4">
+                  Explora una carta equilibrada y fresca
                 </h2>
-                <p className="text-gray-300 text-lg leading-relaxed font-light">
-                  Mira nuestro menú actualizado con todos los platos y precios
+                <p className="text-gray-300 text-md leading-relaxed font-light">
+                  Ingredientes simples, preparaciones limpias, sabor real.
                 </p>
               </div>
 
@@ -415,6 +413,9 @@ export default function HomePage() {
         </div>
       </main>
 
+      {/* Reviews Section */}
+      {/* <ReviewsSection /> */}
+
       {/* Footer */}
       <footer
         className="text-gray-700 py-12 mt-20"
@@ -425,7 +426,7 @@ export default function HomePage() {
             <div>
               <Image
                 src="/images/laguna.png"
-                alt="Mestizo Complejo Deli"
+                alt="laguna mestizo"
                 width={200}
                 height={60}
                 className="h-20 w-auto mx-auto"

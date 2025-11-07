@@ -158,7 +158,6 @@ export function MenuDownload() {
                 month: "2-digit",
                 day: "2-digit",
                 hour: "2-digit",
-                minute: "2-digit",
                 hour12: false,
               })}
             </p>
@@ -192,9 +191,6 @@ export function MenuDownload() {
         <div className="bg-gray-800/50 rounded-lg p-6 border border-amber-600/50">
           <p className="text-white mb-2">
             No hay carta disponible en este momento.
-          </p>
-          <p className="text-sm text-gray-300">
-            Sube un archivo PDF para comenzar.
           </p>
         </div>
       )}
