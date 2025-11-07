@@ -33,8 +33,8 @@ export async function POST(request: NextRequest) {
       console.log("No existing files to delete or error deleting:", error)
     }
 
-    // Save new file to Vercel Blob Storage
-    const timestamp = new Date().toISOString().split("T")[0]
+    // Save new file to Vercel Blob Storage con timestamp de fecha y hora para evitar caché
+    const timestamp = new Date().toISOString().replace(/[:.]/g, "-")
     const filename = `carta-mestizo-${timestamp}.pdf`
     
     const bytes = await file.arrayBuffer()
