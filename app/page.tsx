@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { MenuDownload } from "@/components/menu-download";
-// import { ReviewsSection } from "@/components/reviews-section";
+import { ReviewsSection } from "@/components/reviews-section";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -246,7 +246,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Restaurant Info & Location */}
+            {/* Restaurant Info */}
             <div className="space-y-8">
               {/* Restaurant Info */}
               <div
@@ -374,8 +374,15 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Location Section */}
+            {/* Google Reviews CTA */}
+            <div className="lg:col-span-2">
+              <ReviewsSection />
+            </div>
+
+            {/* Location Section */}
+            <div>
               <div
                 className="rounded-2xl shadow-xl p-8 border border-gray-700/50"
                 style={{ backgroundColor: "#222222" }}
@@ -481,9 +488,6 @@ export default function HomePage() {
             </div>
           </div>
         </main>
-
-        {/* Reviews Section */}
-        {/* <ReviewsSection /> */}
 
         {/* Footer */}
         <footer
