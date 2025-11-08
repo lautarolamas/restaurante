@@ -17,13 +17,13 @@ export default function HomePage() {
       streetAddress: "Deán Funes 1695",
       addressLocality: "Dique Luján",
       addressRegion: "Buenos Aires",
-      postalCode: "B1623",
+      postalCode: "B1621",
       addressCountry: "AR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "-34.3966064",
-      longitude: "-58.7057255",
+      latitude: "-34.3958527",
+      longitude: "-58.7069731",
     },
     telephone: "+54 9 11 7367 3508",
     openingHoursSpecification: [
@@ -460,7 +460,7 @@ export default function HomePage() {
 
                   {/* Google Maps Button */}
                   <a
-                    href="https://www.google.com/maps/place/De%C3%A1n+Funes+1695,+B1623+Dique+Luj%C3%A1n,+Provincia+de+Buenos+Aires/@-34.3966064,-58.7083004,17z/data=!3m1!4b1!4m6!3m5!1s0x95bca1b19f825e05:0x5a824b38e4c00e84!8m2!3d-34.3966064!4d-58.7057255!16s%2Fg%2F11s9ks1fxh?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+                    href="https://www.google.com/maps/dir//Laguna+by+mestizo+De%C3%A1n+Funes+1695,+Dique+Luj%C3%A1n+B1621+Tigre+Provincia+de+Buenos+Aires/@-34.3958527,-58.7069731,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95bca17d727cf2f1:0x6e574f0c330a68c4!2m2!1d-58.7069731!2d-34.3958527?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-gray-800/50 hover:bg-gray-700/50 text-white font-light py-3 px-6 rounded-xl text-center border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
