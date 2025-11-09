@@ -200,7 +200,7 @@ export default function HomePage() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
           style={{ backgroundColor: "#f5f5eb" }}
         >
-          <div className="grid gap-8 lg:gap-12 lg:grid-cols-3">
+          <div className="grid gap-8 lg:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {/* Menu Download Section */}
             <div className="lg:col-span-2">
               <div
@@ -247,7 +247,7 @@ export default function HomePage() {
             </div>
 
             {/* Restaurant Info */}
-            <div className="space-y-8">
+            <div className="space-y-8 w-full">
               {/* Restaurant Info */}
               <div
                 className="rounded-2xl shadow-xl p-8 border border-gray-700/50"
@@ -377,12 +377,12 @@ export default function HomePage() {
             </div>
 
             {/* Google Reviews CTA */}
-            <div className="lg:col-span-2">
-              <ReviewsSection />
+            <div className="md:col-span-2 lg:col-span-2 w-full">
+              <ReviewsSection className="w-full h-full" />
             </div>
 
             {/* Location Section */}
-            <div>
+            <div className="w-full">
               <div
                 className="rounded-2xl shadow-xl p-8 border border-gray-700/50"
                 style={{ backgroundColor: "#222222" }}

@@ -28,14 +28,14 @@ export function ReviewsSection({ className = "" }: ReviewsSectionProps) {
       <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">
         Compartí tu experiencia
       </h2>
-      <p className="text-gray-300 text-lg leading-relaxed font-light mb-8">
+      <p className="text-gray-300 text-sm leading-relaxed font-light mb-8 lg:mt-8">
         Tu reseña en Google nos ayuda a que más personas descubran Laguna by
         Mestizo.
       </p>
 
       <Button
         onClick={handleGoogleReview}
-        className="w-full bg-gray-800 hover:bg-gray-700 text-white py-5 text-lg border border-gray-700/50"
+        className="w-full bg-gray-800 hover:bg-gray-700 text-white py-5 text-lg border border-gray-700/50 mt-6 lg:mt-14"
         size="lg"
       >
         <div className="flex items-center justify-center gap-3">
@@ -60,10 +60,6 @@ export function ReviewsSection({ className = "" }: ReviewsSectionProps) {
           <span>Dejar reseña en Google</span>
         </div>
       </Button>
-
-      <p className="text-gray-400 text-sm text-center mt-3 font-light">
-        Se abrirá Google Maps para que escribas tu reseña.
-      </p>
     </div>
   );
 }
