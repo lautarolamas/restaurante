@@ -47,7 +47,10 @@ export default function AdminPage() {
         style={{ backgroundColor: "#f5f5eb" }}
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p>&copy; 2025 Laguna Mestizo. Todos los derechos reservados.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Laguna Mestizo. Todos los derechos
+            reservados.
+          </p>
         </div>
       </footer>
     </div>

@@ -509,7 +509,8 @@ export default function HomePage() {
               Auténtica cocina argentina en Benavidez
             </p> */}
               <p className="text-gray-600 font-light">
-                &copy; 2025 Laguna Mestizo. Todos los derechos reservados.
+                &copy; {new Date().getFullYear()} Laguna Mestizo. Todos los
+                derechos reservados.
               </p>
             </div>
           </div>
