@@ -63,6 +63,11 @@ export const metadata: Metadata = {
       "Descubre la auténtica gastronomía argentina en Benavidez. Carta actualizada y horarios.",
     images: ["/images/laguna.png"],
   },
+  icons: {
+    icon: "/images/laguna.png",
+    shortcut: "/images/laguna.png",
+    apple: "/images/laguna.png",
+  },
   robots: {
     index: true,
     follow: true,
