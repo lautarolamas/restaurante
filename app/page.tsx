@@ -106,7 +106,7 @@ export default function HomePage() {
                 <span className="text-gray-900 font-bold">conquistan </span>
               </h2>
               <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
-                Descubre la auténtica gastronomía argentina en un ambiente
+                Descubrí la auténtica gastronomía argentina en un ambiente
                 cálido y familiar
               </p>
             </div>
@@ -224,7 +224,7 @@ export default function HomePage() {
                     </svg>
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-light text-white mb-4">
-                    Explora una carta equilibrada y fresca
+                    Explorá una carta equilibrada y fresca
                   </h2>
                   <p className="text-gray-300 text-md leading-relaxed font-light">
                     Ingredientes simples, preparaciones limpias, sabor real.

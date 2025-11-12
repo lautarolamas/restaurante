@@ -14,7 +14,7 @@ const unbounded = Unbounded({
 export const metadata: Metadata = {
   title: "Laguna Mestizo - Restaurante Argentino en Benavidez | Carta y Menú",
   description:
-    "Laguna Mestizo: auténtica cocina argentina en Benavidez. Descubre nuestra carta actualizada con los mejores platos tradicionales. Restaurante abierto de lunes a sábado. Reservas y delivery disponible.",
+    "Laguna Mestizo: auténtica cocina argentina en Benavidez. Descubrí nuestra carta actualizada con los mejores platos tradicionales. Restaurante abierto de lunes a sábado. Reservas y delivery disponible.",
   keywords: [
     "laguna mestizo",
     "laguna mestizo benavidez",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Laguna Mestizo - Auténtica Cocina Argentina en Benavidez",
     description:
-      "Descubre la auténtica gastronomía argentina en Laguna Mestizo. Carta actualizada, horarios y ubicación en Benavidez.",
+      "Descubrí la auténtica gastronomía argentina en Laguna Mestizo. Carta actualizada, horarios y ubicación en Benavidez.",
     url: "https://lagunamestizo.com",
     siteName: "Laguna Mestizo",
     locale: "es_AR",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Laguna Mestizo - Auténtica Cocina Argentina",
     description:
-      "Descubre la auténtica gastronomía argentina en Benavidez. Carta actualizada y horarios.",
+      "Descubrí la auténtica gastronomía argentina en Benavidez. Carta actualizada y horarios.",
     images: ["/images/laguna.png"],
   },
   icons: {
