@@ -86,9 +86,10 @@ export default function HomePage() {
                     height={120}
                     className="h-32 sm:h-48 w-auto drop-shadow-2xl"
                     priority
+                    style={{ marginBottom: "-2rem" }}
                   />
                 </div>
-                <p className="text-gray-800 text-xs sm:text-xl font-extralight">
+                <p className="text-gray-600 text-xs sm:text-xl font-extralight">
                   Un espacio que te invita a quedarte
                 </p>
               </div>
@@ -102,10 +103,10 @@ export default function HomePage() {
               Laguna Mestizo - Restaurante Argentino en Benavidez | Dique Luján
             </h1>
             <div className="text-center mb-16">
-              <h2 className="text-sm sm:text-3xl lg:text-5xl font-light text-gray-900 mb-6">
+              <h2 className="text-sm sm:text-3xl lg:text-5xl font-light text-gray-950 ">
                 Sabores frescos. Momentos al aire libre.
               </h2>
-              <p className="text-xs sm:text-2xl text-gray-700 max-w-1xl mx-auto leading-relaxed font-light">
+              <p className="text-xs sm:text-2xl text-gray-600 max-w-1xl mx-auto leading-relaxed font-light">
                 Una experiencia gastronomica pensada para que disfrutes sin
                 apuros.
               </p>
@@ -337,27 +338,8 @@ export default function HomePage() {
 
                 <div className="space-y-4 text-gray-300">
                   <div className="p-4 bg-gray-800/50 rounded-xl border border-gray-700/50">
-                    <div className="flex items-start gap-3">
-                      <svg
-                        className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                      </svg>
-                      <div>
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="text-center">
                         <p className="font-light text-white">Deán Funes 1695</p>
                         <p className="text-gray-400 font-light">
                           Dique Luján Benavidez
@@ -367,9 +349,9 @@ export default function HomePage() {
                   </div>
 
                   <div className="p-4 bg-gray-800/50 rounded-xl border border-gray-700/50">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center justify-center gap-2">
                       <svg
-                        className="w-5 h-5 text-gray-400 flex-shrink-0"
+                        className="w-5 h-5 text-gray-400"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -379,7 +361,7 @@ export default function HomePage() {
                         href="https://wa.me/541165999642"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-light text-white hover:text-gray-300 transition-colors"
+                        className="font-light text-white hover:text-gray-300 transition-colors text-center"
                       >
                         +54 11 6599 9642
                       </a>
