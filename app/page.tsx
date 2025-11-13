@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { MenuDownload } from "@/components/menu-download";
 import { ReviewsSection } from "@/components/reviews-section";
+import { ImageCarousel } from "@/components/image-carousel";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -87,8 +88,8 @@ export default function HomePage() {
                     priority
                   />
                 </div>
-                <p className="text-gray-800 text-lg sm:text-xl font-light">
-                  Auténtica cocina argentina
+                <p className="text-gray-800 text-xs sm:text-xl font-extralight">
+                  Un espacio que te invita a quedarte
                 </p>
               </div>
             </div>
@@ -101,97 +102,17 @@ export default function HomePage() {
               Laguna Mestizo - Restaurante Argentino en Benavidez | Dique Luján
             </h1>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-ligh text-gray-900 mb-6">
-                Sabores que{" "}
-                <span className="text-gray-900 font-bold">conquistan </span>
+              <h2 className="text-sm sm:text-3xl lg:text-5xl font-light text-gray-900 mb-6">
+                Sabores frescos. Momentos al aire libre.
               </h2>
-              <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light">
-                Descubrí la auténtica gastronomía argentina en un ambiente
-                cálido y familiar
+              <p className="text-xs sm:text-2xl text-gray-700 max-w-1xl mx-auto leading-relaxed font-light">
+                Una experiencia gastronomica pensada para que disfrutes sin
+                apuros.
               </p>
             </div>
 
             {/* Featured Image Gallery */}
-            <div className="relative max-w-6xl mx-auto mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Main Featured Image */}
-                <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-300/50">
-                  <div
-                    className="aspect-[4/3] bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
-                    style={{
-                      backgroundImage: "url('/images/gallery/plato1.jpg')",
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  >
-                    {/* Overlay para mejorar legibilidad */}
-                    <div className="absolute inset-0 bg-black/20"></div>
-
-                    {/* Contenido */}
-                    <div className="text-center p-8 relative z-10">
-                      <div className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 border border-white/50">
-                        <svg
-                          className="w-10 h-10 text-gray-800"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                          />
-                        </svg>
-                      </div>
-                      <p className="text-white text-lg font-medium drop-shadow-lg">
-                        Nuestros Platos
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Dessert Showcase */}
-                <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-300/50">
-                  <div
-                    className="aspect-[4/3] bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
-                    style={{
-                      backgroundImage: "url('/images/menu/postre1.jpg')",
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  >
-                    {/* Overlay para mejorar legibilidad */}
-                    <div className="absolute inset-0 bg-black/20"></div>
-
-                    {/* Contenido */}
-                    <div className="text-center p-8 relative z-10">
-                      <div className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 border border-white/50">
-                        <svg
-                          className="w-10 h-10 text-gray-800"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                          />
-                        </svg>
-                      </div>
-                      <p className="text-white text-lg font-medium drop-shadow-lg">
-                        Postres Artesanales
-                      </p>
-                      <p className="text-white text-sm font-light drop-shadow-lg">
-                        {/* Crème brûlée y delicias dulces */}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ImageCarousel />
           </div>
         </section>
 
@@ -223,7 +144,7 @@ export default function HomePage() {
                       />
                     </svg>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl font-light text-white mb-4">
+                  <h2 className="text-2xl sm:text-3xl font-extralight text-white mb-4">
                     Explorá una carta equilibrada y fresca
                   </h2>
                   <p className="text-gray-300 text-md leading-relaxed font-light">
@@ -505,9 +426,7 @@ export default function HomePage() {
                   className="h-20 w-auto mx-auto"
                 />
               </div>
-              {/* <p className="text-gray-800 text-lg mb-4 font-light">
-              Auténtica cocina argentina en Benavidez
-            </p> */}
+
               <p className="text-gray-600 font-light">
                 &copy; {new Date().getFullYear()} Laguna Mestizo. Todos los
                 derechos reservados.
