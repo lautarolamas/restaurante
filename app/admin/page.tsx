@@ -1,6 +1,14 @@
 import { AdminAccess } from "@/components/admin-access";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function AdminPage() {
   return (
